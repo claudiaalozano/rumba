@@ -20,13 +20,15 @@ En esta tarea vamos a realizar dos ejercicios. El primero que hay que desarrolla
 <h2>Guía de creacion de una interfaz gráfica:</h2>
 
 **CREAR INTERFAZ USANDO LA LIBRERIA GTK**
+
 **Pasos**
 
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **CREAR INTERFAZ USANDO TINKER**
+
 **Pasos:**
 
 ***
