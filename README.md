@@ -8,7 +8,9 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/rumba.git)
 
 ***
 <h2>¿De qué trata esta tarea?</h2>
+
 En esta tarea vamos a realizar dos ejercicios:
+
 
 +El primero cosiste en desarrolla una interfaz, para ello usaremos tanto Gtk como tinker.
 
