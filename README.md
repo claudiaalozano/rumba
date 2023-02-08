@@ -31,7 +31,7 @@ En esta tarea vamos a realizar dos ejercicios:
 
 **CREAR INTERFAZ USANDO LA LIBRERIA GTK**<a name="id1"></a>
 
-**Pasos**
+**Pasos:**
 
 
 
