@@ -27,7 +27,7 @@ En esta tarea vamos a realizar dos ejercicios:
 
 <h2>Guía de creacion de una interfaz gráfica:</h2>
 
-**CREAR INTERFAZ USANDO LA LIBRERIA GTK**
+**CREAR INTERFAZ USANDO LA LIBRERIA GTK**<a name="id1"></a>
 
 **Pasos**
 
@@ -35,7 +35,7 @@ En esta tarea vamos a realizar dos ejercicios:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**CREAR INTERFAZ USANDO TINKER**
+**CREAR INTERFAZ USANDO TINKER**<a name="id2"></a>
 
 **Pasos:**
 
