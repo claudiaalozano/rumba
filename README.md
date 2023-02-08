@@ -10,13 +10,13 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/rumba.git)
 <h2>¿De qué trata esta tarea?</h2>
 En esta tarea vamos a realizar dos ejercicios:
 
--El primero cosiste en desarrolla una interfaz, para ello usaremos tanto Gtk como tinker.
+(*)El primero cosiste en desarrolla una interfaz, para ello usaremos tanto Gtk como tinker.
 
   -[Con Gtk](#id1)
   
   -[Con Tinker](#id2)
       
--El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardara en limpiar una superficie determinada.
+(*)El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardara en limpiar una superficie determinada.
 
 ***
 ## Integrantes:
