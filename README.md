@@ -18,7 +18,7 @@ En esta tarea vamos a realizar dos ejercicios:
   
   -[Con Tinker](#id2)
       
-+El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardara en limpiar una superficie determinada.
++El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardará en limpiar una superficie determinada.
 
 ***
 ## Integrantes:
