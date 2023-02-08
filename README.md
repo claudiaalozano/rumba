@@ -1,6 +1,7 @@
 # rumba
 
-<h1 align="center">rumba</h1>
+<h1 align="center">![image](https://user-images.githubusercontent.com/91721875/217545096-4361e30a-3277-4d32-9a34-43967401a082.png)
+Roomba</h1>
 
 <h2>Repositorio:</h2>
 
