@@ -29,6 +29,8 @@ En esta tarea vamos a realizar dos ejercicios:
 
 <h2>Guía de creacion de una interfaz gráfica:</h2>
 
+Una interfaz gráfica es un medio visual a través del cual es usuario puede interatuar y realizar tareas graficamente.
+
 **CREAR INTERFAZ USANDO LA LIBRERIA GTK**<a name="id1"></a>
 
 **Pasos:**
@@ -40,5 +42,22 @@ En esta tarea vamos a realizar dos ejercicios:
 **CREAR INTERFAZ USANDO TINKER**<a name="id2"></a>
 
 **Pasos:**
+
+**1.** En primer lugar, lo primero que neesitamos es importar el módulo Tinker y crear una ventana, esto es la raíz, para la cual usaremos la función Tk(), será el contenedor de nuestra aplicación, aquí iran todos los widgets.
+
+A la raíz siempre se le añade un buble infinito , ya que una vez abrimos la aplicación siempre debe estar esperando órdenes.
+
+```
+from tinker import *
+
+#Creamos la raíz
+Ventana= Tk()
+
+#Bucle de aplicación, es como un while True
+Ventana.mainloop()
+
+```
+**2.** 
+ 
 
 ***
