@@ -43,7 +43,7 @@ Una interfaz gráfica es un medio visual a través del cual es usuario puede int
 
 **Pasos:**
 
-**1.** En primer lugar, lo primero que neesitamos es importar el módulo Tinker y crear una ventana, esto es la raíz, para la cual usaremos la función Tk(), será el contenedor de nuestra aplicación, aquí iran todos los widgets.
+**1.** En primer lugar, lo primero que neesitamos es importar el módulo Tinker y crear una ventana, esto es la raíz, para la cual usaremos la función Tk(), será el      contenedor de nuestra aplicación, aquí iran todos los widgets.
 
 A la raíz siempre se le añade un buble infinito , ya que una vez abrimos la aplicación siempre debe estar esperando órdenes.
 
@@ -57,7 +57,24 @@ Ventana= Tk()
 Ventana.mainloop()
 
 ```
-**2.** 
+**2.** A continuaión le añadimos un título a nuestra ventana principal con el método title() e impondremos que su tamaño no sea modificable su tamaño con el método resizable(0,0); si pusieramos resizable(1,1) podríamos agrandar la ventana con el ratón en ambos en ambos ejes.
+
+Especificamos su tamaño con el método geometry() y el color de fondo con el método config().
+
+```
+from tinker import *
+
+#Creamos la raíz
+Ventana=Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry('250x300') #Tamaño por defecto
+Ventana.config(bg='white') #Fondo
+Ventana.title('Aplicación') #Título
+
+#Bucle de aplicación
+Ventana.mainloop()
+
+```
  
 
 ***
