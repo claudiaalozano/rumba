@@ -15,3 +15,7 @@ s = Spinbox(root, from_=0, to_=100000, increment=1)
 s.pack(pady=10)
 s.config()
 
+buttom = Button(root, text="Aceptar", command=lambda: calculos(s.get()))
+buttom.pack(pady=10)
+
+root.mainloop()
