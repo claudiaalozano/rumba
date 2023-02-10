@@ -30,13 +30,14 @@ def calculos(n):
     zonas=[]
 
     for i in range(n):
-        string= "Zona" + str(i)
+        string= "Zona " + str(i)
         text= Label(new, text=string)
         text.pack(pady=2)
 
         #Largo de la habitación
         largo=Label(new, text="Largo en cm")
-        l=Text(next, width=30, height=1)
+        largo.pack()
+        l=Text(new, width=30, height=1)
         l.pack()
 
         
@@ -71,10 +72,10 @@ def showFinal(zonas, ventana):
     tiempo= superficie/velocidad
     final =Tk()
     final.geometry("600x600")
-    t=Label(final, text="A continuación mostramos el tiempo estimado que tardará el roomba en la habitación ")
+    t=Label(final, text="Tiempo estimado de la roomba")
     t.config(font=20)
     t.pack(pady=30)
-    z=Label(final,text=("Tiempo: " + str(tiempo) + "s" ))
+    z=Label(final,text=("Tiempo: " + str(tiempo) + " segundos" ))
     z.pack()
 
 
@@ -89,4 +90,5 @@ def check(zonas):
 
 
 MenuPrincipal()
+
 root.mainloop()
