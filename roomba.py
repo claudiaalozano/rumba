@@ -48,6 +48,7 @@ def calculos(n):
 
         zonas.append((l,a))
 
-    buttom= Button(new, )
+    buttom= Button(new, text="Obteniendo resultados", command=lambda: showFinal(zonas,new))
+    buttom.pack(pady=15)
 MenuPrincipal()
 root.mainloop()
