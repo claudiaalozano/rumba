@@ -64,7 +64,7 @@ Gtk.main()
 ```
 
 
-**4.**Añadimos un título a la ventana y un botón.
+**4.** Añadimos un título a la ventana y un botón.
 
 ```
 import gi
