@@ -172,6 +172,79 @@ Ventana.mainloop()
 
 ```
 
+Lo primero se ha creado una variable Captura de tipo StringVar(), esta variable es para capturar los datos introducidos en el campo de texto, posteriormente en el config del campo de texto (variable Entrada) hemos especificado que textvariable es Captura, esto hará que guardemos en esta variable lo introducido en el campo de texto, pero para poder utilizarlo utilizar los botones.
+
+
+**5.** Los botones lo definimos a través de un widget Button. Crearemos un botón y lo colocaremos a la derecha de nuestro campo de texto, con la función grid() le especificaremos la columna 1 (la anterior era 0)
+
+```
+from tkinter import *
+
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("250x300") #Tamaño por defecto
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Variable de captura de texto
+Captura = StringVar()
+#Cremos campo de texto
+Entrada = Entry(Ventana)
+Entrada.grid(row=0, column=0)
+Entrada.config(textvariable=Captura)
+
+#Creamos botón
+Boton = Button(Ventana, text="AQUI")
+Boton.grid(row=0, column=1)
+
+#Bucle de aplicación
+Ventana.mainloop()
+
+```
+Acabamos de crear el botón pero este no hace nada.
+
+**5.** Le damos función al botón
+
+```
+from tkinter import *
+
+def Copiar():
+    """Lo obtenido por Captura lo pasamos a Resultado"""
+    Resultado.set(Captura.get())
+    
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("170x90") #Tamaño por defecto
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Captura de texto
+Captura = StringVar()
+#Impresión de texto
+Resultado = StringVar()
+
+#Cremos campo de texto
+Entrada = Entry(Ventana)
+Entrada.grid(row=1, column=0)
+Entrada.config(textvariable=Captura) #El texto se guarda en Captura
+
+#Creamos botón
+Boton = Button(Ventana, text="AQUI", command=Copiar) #Llama a Copiar
+Boton.grid(row=1, column=1)
+
+#Label de resultados 
+Etiqueta = Label(Ventana, text = "") 
+Etiqueta.grid(row=2, column=0, sticky="w") #En la tercera fila y alineado a la izquierda
+Etiqueta.config(textvariable=Resultado) #Se muestra el texto de Resultado
+
+#Etiqueta de título
+Etiqueta2 = Label(Ventana, text = "REPETIDOR") 
+Etiqueta2.grid(row=0, column=0, columnspan=2) #Ocupando dos columnas
+
+#Bucle de aplicación
+Ventana.mainloop()
+
+```
 
 
 ***
