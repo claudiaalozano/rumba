@@ -50,5 +50,36 @@ def calculos(n):
 
     buttom= Button(new, text="Obteniendo resultados", command=lambda: showFinal(zonas,new))
     buttom.pack(pady=15)
+
+
+def showFinal(zonas, ventana):
+    velocidad=3
+
+    if not check(zonas):
+        t= Label(ventana, text="Los valores introducidos no son válidos.")
+        t.config(font=25)
+        t.pack(pady=40)
+        t.after(2000,t.destroy)
+
+        return 0
+
+    superficie = 0
+
+    for zona in zonas:
+        superficie = superficie + float(zona[0].get("1.0", END)) + float(zona[1].get("1.0", END))
+    
+    tiempo= superficie/velocidad
+    final =Tk()
+    final.geometry("600x600")
+    t=Label(final, text="A continuación mostramos el tiempo estimado que tardará el roomba en la habitación ")
+    t.config(font=20)
+    t.pack(pady=30)
+    z=Label(final,text=("Tiempo: " + str(tiempo) + "s" ))
+    z.pack()
+
+
+
+
+
 MenuPrincipal()
 root.mainloop()
