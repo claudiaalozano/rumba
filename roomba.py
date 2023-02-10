@@ -22,7 +22,32 @@ def calculos(n):
     n= int(n)
     root.destroy()
 
-    
+    if n == 0:
+        return 0
 
+    new=Tk()
+    new.geometry("600x600")
+    zonas=[]
+
+    for i in range(n):
+        string= "Zona" + str(i)
+        text= Label(new, text=string)
+        text.pack(pady=2)
+
+        #Largo de la habitación
+        largo=Label(new, text="Largo en cm")
+        l=Text(next, width=30, height=1)
+        l.pack()
+
+        
+        #Ancho de la habitación
+        ancho=Label(new, text="Ancho en cm")
+        ancho.pack()
+        a= Text(new, width=30, height=1)
+        a.pack()
+
+        zonas.append((l,a))
+
+    buttom= Button(new, )
 MenuPrincipal()
 root.mainloop()
