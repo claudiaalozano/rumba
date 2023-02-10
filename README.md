@@ -95,5 +95,29 @@ Etiqueta.grid(row=0, column=0)
 Ventana.mainloop()
  
  ```
+La etiqueta tiene color de fondo por defecto, por lo que vamos a especificarle el mismo color de fondo que la raíz y además aumentaremos el tamaño de letra, también pondremos las letras verdes y añadiremos un margen para que no aparezca pegada al borde.
+
+```
+from tkinter import *
+
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("250x300") #Tamaño por defecto
+Ventana.config(bg="white") #Color de fondo
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Cremos label
+Etiqueta = Label(Ventana, text = "Mi primera etiqueta")
+Etiqueta.grid(row=0, column=0)
+Etiqueta.config(bg="white",        #Color de fondo
+                fg="green",        #Color de letras
+                font=("Arial", 12),#Tipo y tamaño de letra
+                padx=10, pady=10)  #Margenes
+                
+#Bucle de aplicación
+Ventana.mainloop()
+
+```
 
 ***
