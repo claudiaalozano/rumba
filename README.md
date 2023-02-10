@@ -57,7 +57,7 @@ Ventana= Tk()
 Ventana.mainloop()
 
 ```
-**2.** A continuaión le añadimos un título a nuestra ventana principal con el método title() e impondremos que su tamaño no sea modificable su tamaño con el método resizable(0,0); si pusieramos resizable(1,1) podríamos agrandar la ventana con el ratón en ambos en ambos ejes.
+**2.** A continuación le añadimos un título a nuestra ventana principal con el método title() e impondremos que su tamaño no sea modificable su tamaño con el método resizable(0,0); si pusieramos resizable(1,1) podríamos agrandar la ventana con el ratón en ambos en ambos ejes.
 
 Especificamos su tamaño con el método geometry() y el color de fondo con el método config().
 
@@ -146,6 +146,30 @@ Etiqueta.config(bg="white",        #Color de fondo
                 
 #Bucle de aplicación
 Ventana.mainloop()
+```
+
+**4.** Otras de las cosas que podemos añadir es la posibilidad de introducir texto manualmente, esto lo haremos a través de un widget Entry.
+
+```
+from tkinter import *
+
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("250x300") #Tamaño por defecto
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Variable de captura de texto
+Captura = StringVar()
+
+#Cremos campo de texto
+Entrada = Entry(Ventana)
+Entrada.grid(row=0, column=0)
+Entrada.config(textvariable=Captura)
+
+#Bucle de aplicación
+Ventana.mainloop()
+
 ```
 
 
