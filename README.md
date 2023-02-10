@@ -83,9 +83,9 @@ Ventana.mainloop()
 #Creamos raíz
 Ventana = Tk()
 Ventana.resizable(0,0) #Impedimos redimensionar la ventana
-Ventana.geometry("250x300") #Tamaño por defecto
-Ventana.config(bg="white") #Color de fondo
-Ventana.title("Mi Aplicación") #Titulo de ventana
+Ventana.geometry('250x300') #Tamaño por defecto
+Ventana.config(bg='white') #Color de fondo
+Ventana.title('Aplicación') #Titulo de ventana
 
 #Cremos label
 Etiqueta = Label(Ventana, text = "Mi primera etiqueta")
