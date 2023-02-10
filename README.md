@@ -494,7 +494,7 @@ def test():
 ```
 
 
-<h2>Guía de creacion de una interfaz gráfica:</h2><a name="id3"></a>
+<h2>Roomba:</h2><a name="id3"></a>
 
 ```
 from tkinter import *
