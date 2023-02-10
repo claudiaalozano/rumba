@@ -20,6 +20,8 @@ En esta tarea vamos a realizar dos ejercicios:
       
 +El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardará en limpiar una superficie determinada.
 
+  -[Rommba](#id3)
+
 ***
 ## Integrantes:
 1. [Alba](https://github.com/albabernal03) 
@@ -488,6 +490,13 @@ def test():
     
 +....
 
+
+```
+
+
+<h2>Guía de creacion de una interfaz gráfica:</h2><a name="id3"></a>
+
+```
 
 ```
 
