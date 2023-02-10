@@ -119,5 +119,35 @@ Etiqueta.config(bg="white",        #Color de fondo
 Ventana.mainloop()
 
 ```
+Asimismo, podemos modificar el texto de la etiqueta durante de la ejecución, esto se hace creando una variable de tipo StringVar() y asignandola a nuestra etiqueta, el label mostrará en cada momento el valor de esta variable.
+
+```
+from tkinter import *
+
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("250x300") #Tamaño por defecto
+Ventana.config(bg="white") #Color de fondo
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Variable label
+TextoEtiqueta = StringVar()
+TextoEtiqueta.set("Hola")
+
+#Cremos label
+Etiqueta = Label(Ventana, text = "Mi primera etiqueta")
+Etiqueta.grid(row=0, column=0)
+Etiqueta.config(bg="white",        #Color de fondo
+                fg="green",        #Color de letras
+                font=("Arial", 12),#Tipo y tamaño de letra
+                padx=10, pady=10,  #Margenes
+                textvariable=TextoEtiqueta)  #Texto variable
+                
+#Bucle de aplicación
+Ventana.mainloop()
+```
+
+
 
 ***
