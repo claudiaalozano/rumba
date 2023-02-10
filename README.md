@@ -246,5 +246,35 @@ Ventana.mainloop()
 
 ```
 
+**6.** Esto son algunas de las cosas que se puede hacer con la ventana gráficamente. Muchimas más cosas que se pueden utilizar son:
+
+       -Frame(marcos): Los Frames son marcos contenedores de otros widgets. Pueden tener tamaño propio y posicionarse en distintos lugares de otro contenedor (ya sea    la raíz u otro marco).
+       
+```
+from tkinter import *
+
+# Configuración de la raíz
+root = Tk()
+root.title("Hola mundo")
+root.resizable(1,1)
+root.iconbitmap('hola.ico') #icono de la ventana, en ico o xbm en Linux
+
+frame = Frame(root, width=480, height=320)
+frame.pack(fill='both', expand=1) 
+frame.config(cursor="pirate")
+frame.config(bg="lightblue")
+frame.config(bd=25) #tamaño del borde en píxeles
+frame.config(relief="sunken") #relieve del frame hundido
+
+root.config(cursor="arrow") #tipo del cursor
+root.config(bg="blue")
+root.config(bd=15)
+root.config(relief="ridge")
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+
+```
+
 
 ***
