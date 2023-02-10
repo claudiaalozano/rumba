@@ -276,5 +276,86 @@ root.mainloop()
 
 ```
 
+      -Radiobutton: Se utilizan cuando quieres ofrecerle al usuario la posibilidad de elegir una opción entre varias.
+      
+ ```
+ from tkinter import *
+
+def seleccionar():
+    monitor.config(text="{}".format(opcion.get()))
+
+def reset():
+    opcion.set(None)
+    monitor.config(text="")
+
+# Configuración de la raíz
+root = Tk()
+
+opcion = IntVar()
+
+Radiobutton(root, text="Opción 1", variable=opcion, 
+            value=1, command=seleccionar).pack()
+Radiobutton(root, text="Opción 2", variable=opcion, 
+            value=2, command=seleccionar).pack()
+Radiobutton(root, text="Opción 3", variable=opcion,   
+            value=3, command=seleccionar).pack()
+
+monitor = Label(root)
+monitor.pack()
+
+Button(root, text="Reiniciar", command=reset).pack()
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+ 
+ ```
+ 
+      -Checkbutton: si queremos simplemente proponer una única opción es mejor utilizar un botón de selección.
+      
+ ```
+ from tkinter import *
+
+def seleccionar():
+    cadena = ""
+    if (leche.get()):
+        cadena += "Con leche"
+    else:
+        cadena += "Sin leche"
+
+    if (azucar.get()):
+        cadena += " y con azúcar"
+    else:
+        cadena += " y sin azúcar"
+
+    monitor.config(text=cadena)
+
+# Configuración de la raíz
+root = Tk()
+root.title("Cafetería")
+root.config(bd=15)
+
+leche = IntVar()    # 1 si, 0 no
+azucar = IntVar()   # 1 si, 0 no
+
+imagen = PhotoImage(file="imagen.gif")
+Label(root, image=imagen).pack(side="left")
+
+frame = Frame(root)
+frame.pack(side="left")
+
+Label(frame, text="¿Cómo quieres el café?").pack(anchor="w")
+Checkbutton(frame, text="Con leche", variable=leche, onvalue=1, 
+            offvalue=0, command=seleccionar).pack(anchor="w")
+Checkbutton(frame, text="Con azúcar", variable=azucar, onvalue=1, 
+            offvalue=0, command=seleccionar).pack(anchor="w")
+
+monitor = Label(frame)
+monitor.pack()
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+ 
+ ```
+
 
 ***
