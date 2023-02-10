@@ -67,7 +67,7 @@ def showFinal(zonas, ventana):
     superficie = 0
 
     for zona in zonas:
-        superficie = superficie + float(zona[0].get("1.0", END)) + float(zona[1].get("1.0", END))
+        superficie = superficie + float(zona[0].get("1.0", END)) * float(zona[1].get("1.0", END))
     
     tiempo= superficie/velocidad
     final =Tk()
