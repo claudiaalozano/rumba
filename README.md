@@ -75,6 +75,24 @@ Ventana.title('Aplicación') #Título
 Ventana.mainloop()
 
 ```
+ **3.** Ahora utilizamos la etiqueta label que nos permite crear texto estático. Para ello crear un Label pasando como argumentos la raíz(ventana) y el texto a mostrar, luego la incluimos en nuestra ventana con la función grid(), la función grid() dispone los elementos como si fuera una tabla, indicando como parámetros la fila y columna de la tabla para maquetar los elementos de nuestra ventana.
  
+ ´´´
+ from tkinter import *
+ 
+#Creamos raíz
+Ventana = Tk()
+Ventana.resizable(0,0) #Impedimos redimensionar la ventana
+Ventana.geometry("250x300") #Tamaño por defecto
+Ventana.config(bg="white") #Color de fondo
+Ventana.title("Mi Aplicación") #Titulo de ventana
+
+#Cremos label
+Etiqueta = Label(Ventana, text = "Mi primera etiqueta")
+Etiqueta.grid(row=0, column=0)
+
+#Bucle de aplicación
+Ventana.mainloop()
+ ´´´
 
 ***
