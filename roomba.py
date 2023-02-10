@@ -78,7 +78,14 @@ def showFinal(zonas, ventana):
     z.pack()
 
 
-
+def check(zonas):
+    for zona in zonas:
+        try:
+            float(zona[0].get("1.0" , END))
+            float(zona[1].get("1.0" , END))
+        except:
+            return False
+    return True
 
 
 MenuPrincipal()
