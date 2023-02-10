@@ -258,7 +258,7 @@ Ventana.mainloop()
 ```
 Acabamos de crear el botón pero este no hace nada.
 
-**5.** Le damos función al botón
+**6.** Le damos función al botón
 
 ```
 from tkinter import *
@@ -301,7 +301,7 @@ Ventana.mainloop()
 
 ```
 
-**6.** Esto son algunas de las cosas que se puede hacer con la ventana gráficamente. Muchimas más cosas que se pueden utilizar son:
+**7.** Esto son algunas de las cosas que se puede hacer con la ventana gráficamente. Muchimas más cosas que se pueden utilizar son:
 
        -Frame(marcos): Los Frames son marcos contenedores de otros widgets. Pueden tener tamaño propio y posicionarse en distintos lugares de otro contenedor (ya sea    la raíz u otro marco).
        
