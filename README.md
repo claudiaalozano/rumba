@@ -33,7 +33,35 @@ Una interfaz gráfica es un medio visual a través del cual es usuario puede int
 
 **CREAR INTERFAZ USANDO LA LIBRERIA GTK**<a name="id1"></a>
 
+La biblioteca GTK se usa para desarrollar el entorno gráfico GNOME, así como sus aplicaciones, a la vez que algunos otros entornos gráficos. La biblioteca GTK permite el desarrollo sencillo de interfaces gráficas y su uso conjunto con Python permite el desarrollo rápido de aplicaciones gráficas potentes.
+
 **Pasos:**
+
+**1.** En el principio, tenemos que importar el módulo Gtk para poder acceder a las clases y funciones GTK + . Dado que el sistema de un usuario puede tener varias versiones de GTK + instaladas al mismo, queremos asegurarnos de que cuando importamos GTK que se refiere a GTK + 3 y no cualquier otra versión de la biblioteca, que es el propósito de la declaración. Asimismo creamos una ventana vacía.
+
+```
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
+win = Gtk.Window()
+
+```
+
+**2.** Ahora establecemos que al clicar en X se cierre la ventana y mostramos esta ventana.
+
+```
+win.connect("delete-event", Gtk.main_quit)
+win.show_all()
+
+```
+
+**3.** Por último, se comienza el bucle de procesamiento + GTK que deja de funcionar cuando la ventana se cierra.
+
+```
+Gtk.main()
+
+```
 
 
 
