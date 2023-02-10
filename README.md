@@ -394,5 +394,8 @@ root.mainloop()
 
 
 ```
+     -Dialogs(diálogos): as ventanas emergentes, cuadros de diálogo o simplemente Pop Ups, sirven para mostrar o pedir información rápida al usuario. Reciben ese nombre porque no forma parte de la ventana principal, sinó que aparecen de golpe encima.
+
+      La ventana emergente por excelencia es la MessageBox, que sirve para mostrar un icono y un mensaje, pero tiene algunas variantes. Desde la clásico ventana con la opción de aceptar, la de alerta para informar de excepciones o errores, y las de aceptar o rechazar algo.
 
 ***
