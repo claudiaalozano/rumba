@@ -33,7 +33,35 @@ Una interfaz gráfica es un medio visual a través del cual es usuario puede int
 
 **CREAR INTERFAZ USANDO LA LIBRERIA GTK**<a name="id1"></a>
 
+La biblioteca GTK se usa para desarrollar el entorno gráfico GNOME, así como sus aplicaciones, a la vez que algunos otros entornos gráficos. La biblioteca GTK permite el desarrollo sencillo de interfaces gráficas y su uso conjunto con Python permite el desarrollo rápido de aplicaciones gráficas potentes.
+
 **Pasos:**
+
+**1.** En el principio, tenemos que importar el módulo Gtk para poder acceder a las clases y funciones GTK + . Dado que el sistema de un usuario puede tener varias versiones de GTK + instaladas al mismo, queremos asegurarnos de que cuando importamos GTK que se refiere a GTK + 3 y no cualquier otra versión de la biblioteca, que es el propósito de la declaración. Asimismo creamos una ventana vacía.
+
+```
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
+win = Gtk.Window()
+
+```
+
+**2.** Ahora establecemos que al clicar en X se cierre la ventana y mostramos esta ventana.
+
+```
+win.connect("delete-event", Gtk.main_quit)
+win.show_all()
+
+```
+
+**3.** Por último, se comienza el bucle de procesamiento + GTK que deja de funcionar cuando la ventana se cierra.
+
+```
+Gtk.main()
+
+```
 
 
 
@@ -246,5 +274,194 @@ Ventana.mainloop()
 
 ```
 
+**6.** Esto son algunas de las cosas que se puede hacer con la ventana gráficamente. Muchimas más cosas que se pueden utilizar son:
+
+       -Frame(marcos): Los Frames son marcos contenedores de otros widgets. Pueden tener tamaño propio y posicionarse en distintos lugares de otro contenedor (ya sea    la raíz u otro marco).
+       
+```
+from tkinter import *
+
+# Configuración de la raíz
+root = Tk()
+root.title("Hola mundo")
+root.resizable(1,1)
+root.iconbitmap('hola.ico') #icono de la ventana, en ico o xbm en Linux
+
+frame = Frame(root, width=480, height=320)
+frame.pack(fill='both', expand=1) 
+frame.config(cursor="pirate")
+frame.config(bg="lightblue")
+frame.config(bd=25) #tamaño del borde en píxeles
+frame.config(relief="sunken") #relieve del frame hundido
+
+root.config(cursor="arrow") #tipo del cursor
+root.config(bg="blue")
+root.config(bd=15)
+root.config(relief="ridge")
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+
+```
+
+      -Radiobutton: Se utilizan cuando quieres ofrecerle al usuario la posibilidad de elegir una opción entre varias.
+      
+ ```
+ from tkinter import *
+
+def seleccionar():
+    monitor.config(text="{}".format(opcion.get()))
+
+def reset():
+    opcion.set(None)
+    monitor.config(text="")
+
+# Configuración de la raíz
+root = Tk()
+
+opcion = IntVar()
+
+Radiobutton(root, text="Opción 1", variable=opcion, 
+            value=1, command=seleccionar).pack()
+Radiobutton(root, text="Opción 2", variable=opcion, 
+            value=2, command=seleccionar).pack()
+Radiobutton(root, text="Opción 3", variable=opcion,   
+            value=3, command=seleccionar).pack()
+
+monitor = Label(root)
+monitor.pack()
+
+Button(root, text="Reiniciar", command=reset).pack()
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+ 
+ ```
+ 
+      -Checkbutton: si queremos simplemente proponer una única opción es mejor utilizar un botón de selección.
+      
+ ```
+ from tkinter import *
+
+def seleccionar():
+    cadena = ""
+    if (leche.get()):
+        cadena += "Con leche"
+    else:
+        cadena += "Sin leche"
+
+    if (azucar.get()):
+        cadena += " y con azúcar"
+    else:
+        cadena += " y sin azúcar"
+
+    monitor.config(text=cadena)
+
+# Configuración de la raíz
+root = Tk()
+root.title("Cafetería")
+root.config(bd=15)
+
+leche = IntVar()    # 1 si, 0 no
+azucar = IntVar()   # 1 si, 0 no
+
+imagen = PhotoImage(file="imagen.gif")
+Label(root, image=imagen).pack(side="left")
+
+frame = Frame(root)
+frame.pack(side="left")
+
+Label(frame, text="¿Cómo quieres el café?").pack(anchor="w")
+Checkbutton(frame, text="Con leche", variable=leche, onvalue=1, 
+            offvalue=0, command=seleccionar).pack(anchor="w")
+Checkbutton(frame, text="Con azúcar", variable=azucar, onvalue=1, 
+            offvalue=0, command=seleccionar).pack(anchor="w")
+
+monitor = Label(frame)
+monitor.pack()
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+ 
+ ```
+       -Menú
+       
+```
+from tkinter import *
+
+# Configuración de la raíz
+root = Tk()
+
+menubar = Menu(root)
+root.config(menu=menubar)
+
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="Nuevo")
+filemenu.add_command(label="Abrir")
+filemenu.add_command(label="Guardar")
+filemenu.add_command(label="Cerrar")
+filemenu.add_separator()
+filemenu.add_command(label="Salir", command=root.quit)
+
+editmenu = Menu(menubar, tearoff=0)
+editmenu.add_command(label="Cortar")
+editmenu.add_command(label="Copiar")
+editmenu.add_command(label="Pegar")
+
+helpmenu = Menu(menubar, tearoff=0)
+helpmenu.add_command(label="Ayuda")
+helpmenu.add_separator()
+helpmenu.add_command(label="Acerca de...")
+
+menubar.add_cascade(label="Archivo", menu=filemenu)
+menubar.add_cascade(label="Editar", menu=editmenu)
+menubar.add_cascade(label="Ayuda", menu=helpmenu)
+
+# Finalmente bucle de la aplicación
+root.mainloop()
+
+
+```
+     -Dialogs(diálogos): Las ventanas emergentes, cuadros de diálogo o simplemente Pop Ups, sirven para mostrar o pedir información rápida al usuario. Reciben ese nombre porque no forma parte de la ventana principal, sinó que aparecen de golpe encima.
+
+      La ventana emergente por excelencia es la MessageBox, que sirve para mostrar un icono y un mensaje, pero tiene algunas variantes. Desde la clásico ventana con la opción de aceptar, la de alerta para informar de excepciones o errores, y las de aceptar o rechazar algo.
+      
+```
++MessageBox.showinfo("Hola!", "Hola mundo") # título, mensaje
+
++MessageBox.showwarning("Alerta", "Sección sólo para administradores.")
+
++MessageBox.showerror("Error", "Ha ocurrido un error inesperado.")
+
++resultado = MessageBox.askquestion("Salir", 
+    "¿Está seguro que desea salir sin guardar?")
+
+if resultado == "yes":
+    root.destroy()  # Destruir, alternativa a quit
+    
++resultado = MessageBox.askokcancel("Salir", 
+    "¿Sobreescribir fichero actual?")
+
+if resultado == True:
+    # Hacer algo
+    
+    
++resultado = MessageBox.askretrycancel("Reintentar",
+    "No se puede conectar")
+
+if resultado == True:
+    # Hacer algo
+    
++from tkinter import colorchooser as ColorChooser
+
+def test():
+    color = ColorChooser.askcolor(title="Elige un color")
+    print(color)
+    
+    
++....
+
+
+```
 
 ***
