@@ -1,7 +1,7 @@
 from tkinter import *
+root = Tk()
+root.geometry("600x600")
 def MenuPrincipal():
-    root = Tk()
-    root.geometry("600x600")
 
     tittle_text= Label(root, text="Prueba Interface", font=("Arial", 20))
     tittle_text.config(font=17)
@@ -17,6 +17,12 @@ def MenuPrincipal():
 
     buttom = Button(root, text="Aceptar", command=lambda: calculos(s.get()))
     buttom.pack(pady=10)
+
+def calculos(n):
+    n= int(n)
+    root.destroy()
+
+    
 
 MenuPrincipal()
 root.mainloop()
