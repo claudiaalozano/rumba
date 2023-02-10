@@ -410,6 +410,28 @@ root.mainloop()
 
 if resultado == "yes":
     root.destroy()  # Destruir, alternativa a quit
+    
++resultado = MessageBox.askokcancel("Salir", 
+    "¿Sobreescribir fichero actual?")
+
+if resultado == True:
+    # Hacer algo
+    
+    
++resultado = MessageBox.askretrycancel("Reintentar",
+    "No se puede conectar")
+
+if resultado == True:
+    # Hacer algo
+    
++from tkinter import colorchooser as ColorChooser
+
+def test():
+    color = ColorChooser.askcolor(title="Elige un color")
+    print(color)
+    
+    
++....
 
 
 ```
