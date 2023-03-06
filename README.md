@@ -615,6 +615,12 @@ def MenuPrincipal():
 
 <h2>Resultados:</h2>
 
+**En primer lugar nos pide que introduamos el número de zonas**
+
+
+![interfaz 1](https://user-images.githubusercontent.com/91721875/223163257-f4a4b36b-0d76-48e9-a260-e9c74b441e80.png)
+
+
 
 
 ***
