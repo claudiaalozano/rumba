@@ -100,7 +100,7 @@ Gtk.main()
 
 **Pasos:**
 
-**1.** En primer lugar, lo primero que neesitamos es importar el módulo Tinker y crear una ventana, esto es la raíz, para la cual usaremos la función Tk(), será el      contenedor de nuestra aplicación, aquí iran todos los widgets.
+**1.** En primer lugar, lo primero que neesitamos es importar el módulo Tinker y crear una ventana, esto es la raíz, para la cual usaremos la función Tk(), será el contenedor de nuestra aplicación, aquí iran todos los widgets.
 
 A la raíz siempre se le añade un buble infinito , ya que una vez abrimos la aplicación siempre debe estar esperando órdenes.
 
