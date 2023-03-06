@@ -21,6 +21,10 @@ En esta tarea vamos a realizar dos ejercicios:
 +El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardará en limpiar una superficie determinada. En este ejericio ponemos en prátia lo de la interfaz gráfica; puesto que se le pedira al usuario una serie de datos para calcular el tiempo estimado.
 
   -[Rommba](#id3)
+  
++Asimismo resolvemos el ejemplo subido en el campus:
+
+  -[Solución hab.campus](#id4)
 
 ***
 ## Integrantes:
@@ -613,7 +617,7 @@ def MenuPrincipal():
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<h2>Resultados:</h2>
+<h2>Resultados código:</h2>
 
 **En primer lugar nos pide que introduamos el número de zonas**
 
@@ -629,5 +633,13 @@ def MenuPrincipal():
 **Por último, nos mostrará el tiempo en segundo (unidad usada en programación) que tardará.**
 
 ![interfax 3](https://user-images.githubusercontent.com/91721875/223165089-c08fe849-e379-4534-9c1a-46ac9a1c1cbf.png)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+**SOLUCIÓN DEL ROOMBA PARA DIMENSIONES DE LA HABITACIÓN DE EJEMPLO**<a name="id4"></a>
+
+
+![HAB CAMPUS](https://user-images.githubusercontent.com/91721875/223166317-2b905f30-5830-418e-9c10-1f38b39d24c8.png)
+
 
 ***
