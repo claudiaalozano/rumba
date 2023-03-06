@@ -17,4 +17,3 @@ def MenuPrincipal():
     buttom = Button(root, text="Aceptar", command=lambda: calculos(s.get()))
     buttom.pack(pady=10)
 
-    root.mainloop()

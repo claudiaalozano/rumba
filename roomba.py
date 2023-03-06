@@ -73,4 +73,4 @@ def check(zonas):
     return True
 
 
-root.mainloop()
+
