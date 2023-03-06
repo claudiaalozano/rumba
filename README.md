@@ -621,6 +621,10 @@ def MenuPrincipal():
 ![interfaz 1](https://user-images.githubusercontent.com/91721875/223163257-f4a4b36b-0d76-48e9-a260-e9c74b441e80.png)
 
 
+**A continuación nos pedirá la dimensiones de las zonas introducidas; en este caso pusimos que teniamos 2.
+
+
+![interfaz 2](https://user-images.githubusercontent.com/91721875/223164110-e766fc4f-22f3-48a5-ae07-286021740ccc.png)
 
 
 ***
