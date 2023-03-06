@@ -12,13 +12,13 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/rumba.git)
 En esta tarea vamos a realizar dos ejercicios:
 
 
-+El primero cosiste en desarrolla una interfaz, para ello usaremos tanto Gtk como tinker.
++El primero cosiste en desarrolla una interfaz, para ello usaremos tanto Gtk como tinker (encontramos una explicación paso a paso para crearla).
 
   -[Con Gtk](#id1)
   
   -[Con Tinker](#id2)
       
-+El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardará en limpiar una superficie determinada.
++El segundo en desarrolar un roomba, que nos calule el tiempo estimado que tardará en limpiar una superficie determinada. En este ejericio ponemos en prátia lo de la interfaz gráfica; puesto que se le pedira al usuario una serie de datos para calcular el tiempo estimado.
 
   -[Rommba](#id3)
 
@@ -494,28 +494,12 @@ def test():
 ```
 
 
-<h2>Roomba:</h2><a name="id3"></a>
+<h2>Código roomba:</h2><a name="id3"></a>
 
 ```
 from tkinter import *
 root = Tk()
 root.geometry("600x600")
-def MenuPrincipal():
-
-    tittle_text= Label(root, text="Prueba Interface", font=("Arial", 20))
-    tittle_text.config(font=17)
-    tittle_text.pack(pady=2)
-
-    main_text = Label(root, text = "Por favor introduzca el numero de zonas")
-    main_text.pack(pady=80)
-    main_text.config(font=15)
-
-    s = Spinbox(root, from_=0, to_=100000, increment=1)
-    s.pack(pady=10)
-    s.config()
-
-    buttom = Button(root, text="Aceptar", command=lambda: calculos(s.get()))
-    buttom.pack(pady=10)
 
 def calculos(n):
     n= int(n)
@@ -586,11 +570,6 @@ def check(zonas):
         except:
             return False
     return True
-
-
-MenuPrincipal()
-
-root.mainloop()
 
 ```
 
