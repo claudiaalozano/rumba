@@ -2,7 +2,6 @@ from tkinter import *
 root = Tk()
 root.geometry("600x600")
 
-
 def calculos(n):
     n= int(n)
     root.destroy()
